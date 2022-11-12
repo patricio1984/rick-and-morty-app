@@ -78,9 +78,14 @@ html {
 }
 
 .card-img {
-  max-width: 15rem;
-  margin-right: 2rem;
+  max-width: 12rem;
   border-radius: .5rem 0 0 .5rem;
+}
+
+.card-content {
+  padding: 0.8rem 1.6rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .character-wrapper {
@@ -98,6 +103,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  max-height: 45rem;
+  overflow: auto;
 }
 
 .character-card {
@@ -108,6 +115,10 @@ html {
   flex-direction: row;
   position: relative;
   background-color: #3C3E44;
+}
+
+.character-content {
+  padding: 1.2rem;
 }
 
 .title {
@@ -146,11 +157,18 @@ html {
 }
 
 .title {
+  font-size: 1.5rem;
+}
+
+.title--margin {
+  margin-left: 1.2rem;
+  position: absolute;
+  top: 8.3rem;
   font-size: 1.8rem;
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .button {
@@ -159,10 +177,64 @@ html {
   background-color: #5f3758;
   padding: .4rem 1.2rem;
   font-size: 1.6rem;
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
 }
 
-h1 {
-  font-size: 25px;
-  padding: 30px;
+.main-title {
+  font-size: 3.2rem;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.character-episode-container {
+  padding: 2.8rem 1.6rem;
+  margin: 1.2rem;
+  border: .1rem solid #CCCCCC;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  width: 100%;
+  gap: 2rem;
+}
+
+.character-episode-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem;
+}
+
+.character-episode-content-title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
+  border-bottom: .2rem solid #CCCCCC;
+}
+
+.character-episode-content {
+  width: 32%;
+}
+
+.alive, .dead, .unknown {
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.alive {
+  background: rgb(85, 204, 68);
+}
+
+.dead {
+  background: rgb(214, 61, 46);
+}
+
+.unknown {
+  background: rgb(158, 158, 158);
 }
 

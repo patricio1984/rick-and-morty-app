@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react"
 import "./app.css"
 import CharacterList from "./components/CharacterList"
-import CharacterAEpisodes from "./components/CharacterAEpisodes"
-import CharacterBEpisodes from "./components/CharacterBEpisodes"
+import CharacterEpisodes from "./components/CharacterEpisodes"
 
 const App = () => {
 
   const [characters, setCharacters ] = useState([])
-  const [episodes, setEpisodes ] = useState([])
   const [selectedACharacter, setSelectedACharacter ] = useState([])
   const [selectedBCharacter, setSelectedBCharacter ] = useState([])
   const [characterAEpisodes, setCharacterAEpisodes ] = useState([])
@@ -18,9 +16,6 @@ const App = () => {
       const response = await fetch("https://rickandmortyapi.com/api/character")
       const data = await response.json()
 
-      const response2 = await fetch("https://rickandmortyapi.com/api/episode")
-      const data2 = await response2.json()
-
       setCharacters(data.results);
     }
     fetchData()
@@ -29,24 +24,24 @@ const App = () => {
 
   return (
     <main className="main">
-      <h1>Rick and Morty</h1>
+      <h1 className="main-title">Rick and Morty App</h1>
+
       <section className="flex character-wrapper">
         <CharacterList 
           characters={characters}
-          episodes={episodes} 
-          title={"Character A"} 
+          title={"Character #1"} 
           setSelectedACharacter={setSelectedACharacter} 
           selectedACharacter={selectedACharacter}
           setCharacterAEpisodes={setCharacterAEpisodes}
-
+          characterAEpisodes={characterAEpisodes}
         />
         <CharacterList 
-          characters={characters}
-          episodes={episodes} 
-          title={"Character B"} 
+          characters={characters} 
+          title={"Character #2"} 
           setSelectedBCharacter={setSelectedBCharacter} 
           selectedBCharacter={selectedBCharacter}
-          setCharacterBEpisodes={setCharacterBEpisodes} 
+          setCharacterBEpisodes={setCharacterBEpisodes}
+          characterBEpisodes={characterBEpisodes}
         />
       </section>
       <section>
@@ -54,14 +49,15 @@ const App = () => {
       {(selectedACharacter.length !== 0 && selectedBCharacter.length !== 0) ?
 
          (
-         <section>
-            <CharacterAEpisodes title={"Character 1# - Only Episodes"} characterAEpisodes={characterAEpisodes}/>
-            <CharacterBEpisodes title={"Character 2# - Only Episodes"} characterBEpisodes={characterBEpisodes}/>
-         </section>
+         <article className="character-episode-container flex">
+            <CharacterEpisodes title={"Character 1# - Only Episodes"} characterAEpisodes={characterAEpisodes}/>
+            <CharacterEpisodes title={"Character 2# - Only Episodes"} characterBEpisodes={characterBEpisodes}/>
+            <CharacterEpisodes title={"Character 2# - Only Episodes"} characterBEpisodes={characterBEpisodes}/>
+         </article>
          )
          : 
          
-         (<h1>Please, select a character from the Character A list and another one from the Character B list</h1>) 
+         (<h2 className="character-episode-title">Please, select a character from the Character 1# list and another one from the Character 2# list</h2>) 
       }
       </section>
     </main>
