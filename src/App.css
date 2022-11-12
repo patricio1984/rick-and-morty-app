@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;      
+}
+
+html {
+  font-size: 10px;
+} 
+
+.flex {
+  display: flex;
+}
+
+.main {
+  max-width: 120.8rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-img {
+  max-width: 15rem;
+  margin-right: 2rem;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.character-wrapper {
+  width: 100%;
+  gap: 2rem;
+}
+
+.character-section-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.character-section {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.character-card {
+  flex: 1;
+  margin: 1.2rem;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .6rem 0  rgba(0,0,0,0.3);
+  flex-direction: row;
+  position: relative;
+  background-color: #3C3E44;
+}
+
+.title {
+  width: 100%;
+}
+
+.character-card-selected {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: .5rem;
+  opacity: 0;
+  transition: .5s ease;
+  margin: 0 auto;
+  opacity: .8;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+.background-cardA {
+  background-color: green;
+}
+
+.background-cardB {
+  background-color: #008CBA;
+}
+
+.displayNone {
+  display: none;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.button {
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background-color: #5f3758;
+  padding: .4rem 1.2rem;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 25px;
+  padding: 30px;
+}
+
