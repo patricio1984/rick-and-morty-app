@@ -40,7 +40,7 @@ const CharacterList = ({
                 characters.map(character => {
                     return (           
                         <div key={character.id} className="flex character-card">
-                            <img className="card-img" src={character.image} alt={character.name} />
+                            <img className="card-img" src={character.image} alt={character.name}  loading="lazy" />
         
                             <div className="card-content flex">
                                 <h2 className="title">{character.name}</h2>
