@@ -6,14 +6,17 @@ const CharacterEpisodes = ({title, characterAEpisodes, characterBEpisodes}) => {
   
           <div>{ title === "Character 1# - Only Episodes" ? (
               (characterAEpisodes.map(({id, name, episode, air_date}) => (
-                <div key={id}>{episode} - {name} - {air_date}</div>
+                  <ul key={id}>
+                    <li>{episode} - {name} - {air_date}</li>
+                  </ul>
                 )))
               ) : (
                 (characterBEpisodes.map(({id, name, episode, air_date}) => (
-                  <div key={id}>{episode} - {name} - {air_date}</div>
+                  <ul key={id}>
+                    <li>{episode} - {name} - {air_date}</li>
+                  </ul>
               )))
               )
-
             }
           </div>
       </div>

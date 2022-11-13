@@ -86,11 +86,11 @@ html {
   padding: 0.8rem 1.6rem;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .character-wrapper {
   width: 100%;
-  gap: 2rem;
 }
 
 .character-section-container {
@@ -162,8 +162,6 @@ html {
 
 .title--margin {
   margin-left: 1.2rem;
-  position: absolute;
-  top: 8.3rem;
   font-size: 1.8rem;
 }
 
@@ -182,6 +180,11 @@ html {
   cursor: pointer;
 }
 
+.button:hover {
+    background-color: #3A1834;
+    transition: 0.7s;
+}
+
 .main-title {
   font-size: 3.2rem;
   padding: 3rem 0;
@@ -196,7 +199,6 @@ html {
   border: .1rem solid #CCCCCC;
   font-size: 1.4rem;
   line-height: 1.5;
-  width: 100%;
   gap: 2rem;
 }
 
@@ -216,7 +218,7 @@ html {
 }
 
 .character-episode-content {
-  width: 32%;
+  width: 100%;
 }
 
 .alive, .dead, .unknown {
@@ -238,3 +240,44 @@ html {
   background: rgb(158, 158, 158);
 }
 
+.pagination-article {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+}
+
+.pagination-button {
+    display: inline-block;
+}
+
+.pagination-button:hover {
+    color: #202329;
+    background-color: #F5F5F5;
+}
+
+.pagination-button:focus, .active-page {
+    background-color: #3C3E44;
+}
+
+@media all and (max-width:750px) {
+  .main-title {
+    text-align: unset;
+    padding-left: 1.2rem;
+  }
+
+  .character-episode-container, .character-card {
+    flex-direction: column;
+  }
+
+  .card-img {
+    max-width: 100%;
+  }
+
+  .card-content {
+    width: unset;
+  }
+
+  .button {
+    margin-top: 1.2rem;
+  }
+}

@@ -1,5 +1,3 @@
-import { useCallback } from "react"
-
 const CharacterList = ({
     characters, 
     title, 
@@ -8,7 +6,8 @@ const CharacterList = ({
     selectedACharacter, 
     selectedBCharacter, 
     setCharacterAEpisodes, 
-    setCharacterBEpisodes }) => {
+    setCharacterBEpisodes,
+}) => {
 
   const selectOneCharacter = async (character, episodes) => {
 
